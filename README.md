@@ -1,2 +1,2 @@
 # Java-Script-
-So I am learning JavaScript so i am uploading all my project here
+So I am learning JavaScript also i am uploading all my project here
