@@ -25,18 +25,17 @@ let logout=Boolean(login)
 let x=33
 let z=String(x)
 
-// console.log(x);
-// console.log(typeof x);
+console.log(z);
+console.log(typeof z);
+
+// here the type is String and output is 33
 
 // SMALL TOPIC : COMPARISION OF DATATYPES
 
-console.log("2" == 2); //true
-console.log(2 + 2 + "4"); // 44
-console.log("4"+3+2) // 432
+// console.log("2" == 2); //true
+// console.log(2 + 2 + "4"); // 44
+// console.log("4"+3+2) // 432
 
 // === means it also checks datatypes
 
-console.log("2" === 2) //False
-
-
-
+// console.log("2" === 2) //False
