@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigg Boss</title>
+</head>
+<body>
+    <h1>Set Interval</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    const interval = function (){
+        console.log("Vedant");
+    }
+    
+    document.querySelector('#start').addEventListener('click',function(){
+           let clear = setInterval(interval,1000) 
+
+            document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(clear)
+    })
+
+    })
+
+   
+
+
+   
+</script>
+</html>
