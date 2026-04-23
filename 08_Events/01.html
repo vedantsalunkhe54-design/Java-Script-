@@ -8,7 +8,7 @@
 <body style="background-color: #212121; color: #fff;"
     <h2>Amazing Images</h2>
     <div>
-    <ul >
+    <ul id="images" >
         <li > 
             <img width="400"  id="earth" style="border-radius: 50px; cursor: pointer;" src= "https://wallpapers.com/images/high/planet-earth-space-pc-pf7slaebc2y3nmzv.webp" alt="photoshop" 
         </li>
@@ -19,14 +19,13 @@
 
          <li> 
             <img width="400"  id="venom" style="border-radius: 50px; cursor: pointer;" src= "https://wallpapers.com/images/high/venom-hiss-marvel-pc-jp4ey1n5vl762y6r.webp" alt="photoshop"
+            <!-- onclick="console.log('venom is dangerous')"; -->
         </li>
 
         <li> 
             <img width="400"  id="character" style="border-radius: 50px; cursor: pointer;" src= "https://wallpapers.com/images/high/kaws-pc-companion-model-art-1zqsmlic970q83n3.webp" alt="photoshop"
         </li>
     
-
-        
     </ul>
 
 </div>
@@ -34,6 +33,60 @@
 </body>
 
 <script>
+    // document.querySelector('#venom').onclick = function(){
+    //     alert("venom is beast")
+    // }
+
+    //attachEvent
+    //JQuery
+
+    // document.getElementById('venom').addEventListener('click',function(e){
+    //     alert("This is venom")
+    //     console.log(e);
+    //     console.log('clciked venom');
+         
+    // },false)
+
+
+    //  document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('Clicked inside ul');
+    // },false)
+
+    //In this case first it will print 'clicked venom' then 'clicked inside ul'
+
+    // Propagation Event
+
+
+    
+    //  document.getElementById('images').addEventListener('click',function(e){
+    //     // console.log('Clicked inside ul');
+    // },true)
+
+    //     document.getElementById('venom').addEventListener('click',function(e){
+    //     //alert("This is venom")
+    //     // console.log(e);
+    //     // console.log('clciked venom');
+    // },ture)
+
+    // In this case it will 1st print 'Clicked inside ul' and then 'This is venom'
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode;
+        // removeIt.remove();
+        //removeIt.parentNode.removeChild(removeIt)
+        
+        // Here if we click in ul all images gets deleted
+
+
+        if (e.target.tagName === 'IMG') {
+            removeIt.remove();
+            console.log(e.target.id);
+            
+        }
+    },false)
+
+
 
 </script>
 
