@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>This is Important</h1>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+    const timeChanger = function(){
+       console.log("Vedant is here");
+    }
+    setTimeout(timeChanger,4000)
+
+    const setText = function(){
+        const h1 = document.querySelector('h1')
+        h1.innerHTML = "Best JavaScript Series";
+    }
+
+    let stopper = setTimeout(setText,9000)
+
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+
+        clearTimeout(stopper);
+        console.log("stopped the timer");
+        
+
+    })
+</script>
+</html>
