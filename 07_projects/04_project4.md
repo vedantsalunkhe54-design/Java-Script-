@@ -1,0 +1,65 @@
+# project 4
+
+### This project is related to changing color unlimited times with start and stop button 
+
+## Javascript code
+
+``` JavaScript
+function randomColor() {
+  const hex = '123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+let intervalID;
+
+const startChangingColor = function () {
+  if (!intervalID) {
+    intervalID = setInterval(bgColor, 1000);
+  }
+
+  function bgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalID);
+  intervalID = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+```
+
+## HTML code
+
+``` HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script src="chaiaurcode.js"></script>
+  </body>
+</html>
