@@ -10,7 +10,7 @@ const insert = document.getElementById('insert');
 
 window.addEventListener('keydown', (e) => {
   insert.innerHTML = `
-  <div class'insert'>
+  <div class'color'>
   <table>
   <tr>
     <th>key</th>
