@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <button id="blue">blue</button>
+    <button id="yellow">yellow</button>
+
+</body>
+
+<script>
+        function lesscode(color){
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+    }
+
+    document.querySelector('#blue').addEventListener('click', lesscode('blue'))
+    document.querySelector('#yellow').addEventListener('click', lesscode('yellow'))
+
+
+
+</script>
+</html>
